@@ -5,8 +5,9 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Uncap Finance",
+  tagline:
+    "Bitcoin-backed stablecoin protocol built on Starknet, inspired by Liquity v2.",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -16,14 +17,15 @@ const config: Config = {
 
   // Set the production url of your site here
   url: "https://uncap.finance",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/docs",
+  // Check for BASE_URL environment variable first, then fallback to NODE_ENV check
+  baseUrl:
+    process.env.BASE_URL ||
+    (process.env.NODE_ENV === "development" ? "/" : "/docs"),
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "BBY-Labs",
+  projectName: "uncap-docs",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -43,10 +45,6 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -54,10 +52,8 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/BBY-Labs/uncap-docs/tree/main/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -71,24 +67,28 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/docusaurus-social-card.jpg", // TODO: change to uncap OG image
     navbar: {
-      title: "My Site",
+      title: "Uncap Finance",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "Uncap Finance Logo",
+        src: "img/uncap.jpg",
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Documentation",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          label: "Main Site",
+          href: "https://uncap.finance",
+          position: "right",
+        },
+        {
+          href: "https://github.com/BBY-Labs",
           label: "GitHub",
           position: "right",
         },
@@ -98,10 +98,10 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Documentation",
           items: [
             {
-              label: "Tutorial",
+              label: "Getting Started",
               to: "/intro",
             },
           ],
@@ -110,16 +110,12 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Twitter",
+              href: "https://x.com/UncapLabs",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "Telegram",
+              href: "https://t.me/antoine_argent",
             },
           ],
         },
@@ -127,17 +123,21 @@ const config: Config = {
           title: "More",
           items: [
             {
+              label: "Main Website",
+              href: "https://uncap.finance",
+            },
+            {
               label: "Blog",
               to: "/blog",
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/BBY-Labs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Uncap Finance. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

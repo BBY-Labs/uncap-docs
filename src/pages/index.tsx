@@ -19,7 +19,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Get Started 🚀
           </Link>
         </div>
       </div>
@@ -31,8 +31,8 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Welcome to ${siteConfig.title}`}
+      description="Comprehensive documentation for Uncap Finance"
     >
       <HomepageHeader />
       <main>

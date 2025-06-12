@@ -2,46 +2,49 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome to Uncap Finance
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the **Uncap Finance Documentation**.
+
+## What is Uncap Finance?
+
+Uncap Finance is building the bitUSD protocol - a decentralized, Bitcoin-backed stablecoin protocol built on Starknet, inspired by Liquity v2.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Choose your path based on your needs:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### For Users
 
-### What you'll need
+- [User Guide](./tutorial-basics/create-a-page.md) - Learn how to use Uncap Finance protocols
+- [Wallet Setup](./tutorial-basics/create-a-document.md) - Connect your wallet and get started
+- [Safety Guide](./tutorial-basics/markdown-features.mdx) - Best practices for DeFi security
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### For Developers
 
-## Generate a new site
+- [API Documentation](./tutorial-extras/manage-docs-versions.md) - Integrate with our APIs
+- [Smart Contracts](./tutorial-extras/translate-your-site.md) - Deploy and interact with contracts
+- [SDK Reference](./tutorial-extras/manage-docs-versions.md) - Use our development kits
 
-Generate a new Docusaurus site using the **classic template**.
+### For Contributors
 
-The classic template will automatically be added to your project after you run the command:
+- [Contributing Guide](./tutorial-extras/translate-your-site.md) - Help improve the platform
+- [Governance](./tutorial-extras/manage-docs-versions.md) - Participate in decision making
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## Quick Links
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- 🌐 [Main Website](https://uncap.finance)
+- 🐦 [X](https://twitter.com/uncapfinance)
+- 📱 [Telegram](https://t.me/antoine_argent)
+- 💻 [GitHub](https://github.com/BBY-Labs/uncap-docs/)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## Need Help?
 
-## Start your site
+If you need assistance or have questions:
 
-Run the development server:
+1. Reach out on [Telegram](https://t.me/antoine_argent)
+2. Create an issue on our [GitHub](https://github.com/BBY-Labs/uncap-docs/)
 
-```bash
-cd my-website
-npm run start
-```
+---
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+_Ready to dive in? Start with our [User Guide](./tutorial-basics/create-a-page.md) or explore the [API Documentation](./tutorial-extras/manage-docs-versions.md)._
