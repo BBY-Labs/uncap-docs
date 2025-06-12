@@ -37,7 +37,6 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
@@ -65,7 +64,16 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      "posthog-docusaurus",
+      {
+        apiKey: "phc_yIxOHwCOu1TnJZfNoiwJl6mwxc4PuQG8UGkG2VcZEjL",
+        appUrl: "https://us.i.posthog.com",
+        enableInDevelopment: false, // optional
+      },
+    ],
+  ],
   themeConfig: {
     image: "img/docusaurus-social-card.jpg", // TODO: change to uncap OG image
     navbar: {
